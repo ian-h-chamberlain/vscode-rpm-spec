@@ -7,7 +7,7 @@
     "license": "MIT",
     "publisher": "LaurentTreguier",
     "engines": {
-        "vscode": "^1.48.0"
+        "vscode": "^1.55.0"
     },
     "repository": {
         "type": "git",
@@ -69,11 +69,11 @@
         "compile": "tsc -watch -p ./"
     },
     "devDependencies": {
-        "@types/node": "^12.12.55",
-        "@types/vscode": "^1.48.0",
-        "ovsx": "0.1.0-next.bcce4bc",
-        "typescript": "^4.0.2",
-        "vsce": "^1.79.5"
+        "@types/node": "^12.20.9",
+        "@types/vscode": "^1.55.0",
+        "ovsx": "^0.1.0",
+        "typescript": "^4.2.4",
+        "vsce": "^1.87.1"
     },
     "dependencies": {}
 }
