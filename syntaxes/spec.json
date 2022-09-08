@@ -1,11 +1,11 @@
 {
-    "name": "RPM Spec",
+    "name": "RPM Spec.spec",
     "comment": "Based on https://github.com/waveclaw/language-rpm-spec",
     "scopeName": "source.spec",
     "fileTypes": [
         "spec"
     ],
-    "foldingStartMarker": "(^%(build$|changelog|check$|clean$|description|files|install$|package|(pre($| .*))|prep$|preun|post|postun|trigger|triggerin|triggerpostun|triggerun|verifyscript)\\s*$)",
+    "foldingStartMarker": "(^%(build$|changelog|check$|clean$|description|files|install$|package|(pre($| .*))|prep$|preun|post|postun|trigger|triggerin|triggerpostun|triggerun|verifyscript|posttrans)\\s*$)",
     "foldingStopMarker": "(^$)",
     "patterns": [
         {
@@ -460,7 +460,7 @@
                     "name": "entity.name.section.spec"
                 },
                 {
-                    "begin": "^(%(?:preun|prep|pre|postun|post|packagepreun))",
+                    "begin": "^(%(?:preun|prep|pre|postun|post|packagepreun|posttrans))",
                     "beginCaptures": {
                         "1": {
                             "name": "entity.name.section.spec"
@@ -703,7 +703,7 @@
         "modifiers": {
             "patterns": [
                 {
-                    "match": "^%(?:define|global|undefine|docdir|doc|license)",
+                    "match": "^%(?:define|global|undefine|docdir|doc|license|ghost)",
                     "name": "storage.modifier.spec"
                 },
                 {
@@ -762,14 +762,14 @@
             "patterns": [
                 {
                     "match": "^[*+=-]{30}[+==-]*",
-                    "name": "entity.section.name.changelogs"
+                    "name": "entity.section.name.changelogs.spec"
                 },
                 {
                     "match": "^[ \\t]*- (.+)",
                     "comment": "Changelog details",
                     "captures": {
                         "1": {
-                            "name": "comment.changelogs"
+                            "name": "comment.changelogs.spec"
                         }
                     }
                 },
@@ -778,16 +778,16 @@
                     "comment": "Open Build Service .changes files",
                     "captures": {
                         "1": {
-                            "name": "constant.changelogs"
+                            "name": "constant.changelogs.spec"
                         },
                         "2": {
-                            "name": "entity.name.changelogs"
+                            "name": "entity.name.changelogs.spec"
                         },
                         "3": {
-                            "name": "variable.other.changelogs"
+                            "name": "variable.other.changelogs.spec"
                         },
                         "4": {
-                            "name": "constant.numeric.changelogs"
+                            "name": "constant.numeric.changelogs.spec"
                         }
                     }
                 },
@@ -796,16 +796,16 @@
                     "comment": "GNU Type II changelogs",
                     "captures": {
                         "1": {
-                            "name": "constant.changelogs"
+                            "name": "constant.changelogs.spec"
                         },
                         "2": {
-                            "name": "entity.name.changelogs"
+                            "name": "entity.name.changelogs.spec"
                         },
                         "3": {
-                            "name": "variable.other.changelogs"
+                            "name": "variable.other.changelogs.spec"
                         },
                         "4": {
-                            "name": "constant.numeric.changelogs"
+                            "name": "constant.numeric.changelogs.spec"
                         }
                     }
                 },
@@ -814,16 +814,16 @@
                     "comment": "RedHat New Style changelogs",
                     "captures": {
                         "1": {
-                            "name": "constant.changelogs"
+                            "name": "constant.changelogs.spec"
                         },
                         "2": {
-                            "name": "entity.name.changelogs"
+                            "name": "entity.name.changelogs.spec"
                         },
                         "3": {
-                            "name": "variable.other.changelogs"
+                            "name": "variable.other.changelogs.spec"
                         },
                         "4": {
-                            "name": "constant.numeric.changelogs"
+                            "name": "constant.numeric.changelogs.spec"
                         }
                     }
                 },
@@ -832,10 +832,10 @@
                     "comment": "GNU Type I changelogs",
                     "captures": {
                         "1": {
-                            "name": "constant.changelogs"
+                            "name": "constant.changelogs.spec"
                         },
                         "2": {
-                            "name": "variable.other.changelogs"
+                            "name": "variable.other.changelogs.spec"
                         }
                     }
                 },
@@ -844,10 +844,10 @@
                     "comment": "SUSE Old Style changelogs",
                     "captures": {
                         "1": {
-                            "name": "constant.changelogs"
+                            "name": "constant.changelogs.spec"
                         },
                         "2": {
-                            "name": "variable.other.changelogs"
+                            "name": "variable.other.changelogs.spec"
                         }
                     }
                 }
