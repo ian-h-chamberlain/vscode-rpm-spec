@@ -404,6 +404,10 @@
                 {
                     "match": "^%\\{?(?:make_build|make_install|makeinstall|make_jobs|update_menus|clean_menus)\\}?",
                     "name": "support.function.spec"
+                },
+                {
+                    "match": "^%\\{?(?:systemd_requires|systemd_postun_with_restart|systemd_user_postun_with_restart|systemd_postun|systemd_user_postun|systemd_user_post|systemd_post|systemd_preun|systemd_user_preun)\\}?\\b",
+                    "name": "support.function.systemd.spec"
                 }
             ]
         },
@@ -460,7 +464,7 @@
                     "name": "entity.name.section.spec"
                 },
                 {
-                    "begin": "^(%(?:preun|prep|pre|postun|post|packagepreun|posttrans))",
+                    "begin": "^(%(?:preun|prep|pre|posttrans|postun|post|packagepreun))",
                     "beginCaptures": {
                         "1": {
                             "name": "entity.name.section.spec"
@@ -703,7 +707,7 @@
         "modifiers": {
             "patterns": [
                 {
-                    "match": "^%(?:define|global|undefine|docdir|doc|license|ghost)",
+                    "match": "^%(?:define|global|undefine|docdir|doc|license|ghost|dir)",
                     "name": "storage.modifier.spec"
                 },
                 {
