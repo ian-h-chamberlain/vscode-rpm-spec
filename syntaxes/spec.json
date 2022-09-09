@@ -533,7 +533,7 @@
             "patterns": [
                 {
                     "match": "[0-9]+",
-                    "name": "contstant.numeric.spec"
+                    "name": "constant.numeric.spec"
                 }
             ]
         },
